@@ -5,7 +5,8 @@ from django.http import HttpResponse ,JsonResponse
 
 def index(request):
     if(request.GET.get('name')==None):
-        return HttpResponse("Please enter a valid channel name")
+        return HttpResponse("Please enter a valid channel name <br>Status Ok 200")
+    
     k=request.GET.get('name')
     kl=[]
     t={}
