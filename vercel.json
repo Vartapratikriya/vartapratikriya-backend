@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "narapp/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "narapp/wsgi.py"
+      }
+    ]
+}
