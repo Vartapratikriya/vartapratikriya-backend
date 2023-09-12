@@ -4,6 +4,8 @@ from django.http import HttpResponse ,JsonResponse
 # Create your views here.
 
 def index(request):
+    if(request.GET.get('name')==None):
+        return HttpResponse("Please enter a valid channel name")
     k=request.GET.get('name')
     kl=[]
     t={}
